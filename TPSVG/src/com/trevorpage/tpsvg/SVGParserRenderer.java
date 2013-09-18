@@ -242,6 +242,7 @@ public class SVGParserRenderer extends DefaultHandler {
 			xr.setContentHandler(this);
 			xr.parse(new InputSource(inStream));
 		} catch (Exception e) {
+			Log.e(LOGTAG,"Error parsing the SVG file");
 		}
 
 		addInstruction(INST_END);
